@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  position: relative;
+  height: 54px;
+  width: 124px;
+  font-size: 18px;
+  outline: none;
+  border: 0;
+  font-weight: bold;
+  font-family: 'Muli', sans-serif;
+  border-radius: 12px;
+}
+
+.learn-more {
+  background: #ffc8e0;
+  color: white;
+  box-shadow: 0px 0px 0px 2px #f54591;
+  transform-style: preserve-3d;
+  transition: transform 180ms cubic-bezier(0,0,.21,.7), background 180ms cubic-bezier(0,0,.21,.7)
+}
+
+.learn-more::before {
+  position: absolute;
+  border-radius: 12px;
+  content: '';
+  background: #fe8cbd;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 0px 0px 2px #f54591, 0 8px 8px 0 rgb(208, 208, 208);
+  transform: translate3d(0px, 14px, -1px);
+  transition: transform 180ms cubic-bezier(0,0,.21,.7), box-shadow 180ms cubic-bezier(0,0,.21,.7);
+  
+}
+
+.learn-more:hover {
+  /* background: #fcc1dc; */
+  transform: translateY(4px);
+  
+}
+
+.learn-more:hover::before {
+  transform: translate3d(0px, 10px, -1px);
+  box-shadow: 0px 0px 0px 2px #f54591, 0 6px 7px 0 rgb(186, 186, 186);
+}
+
+.learn-more:active {
+  transform: translateY(14px);
+}
+
+.learn-more:active::before {
+  transform: translate3d(0px, 0px, -1px);
+  box-shadow: 0px 0px 0px 2px #f54591, 0 0 0 0;
+}
+
+
+
+
+
+
